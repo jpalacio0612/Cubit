@@ -2,10 +2,9 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Grid, Modal } from '@material-ui/core'
 import { Pagination } from '@material-ui/lab'
-// import { UserCard } from '../UserCard'
-// import { UserDetails } from '../UserDetails'
 import { useStyles } from './StyledHome'
 import { UserCard } from '../UserCard'
+import { UserDetails } from '../UserDetails'
 
 export const Home = () => {
   const classes = useStyles()
@@ -68,7 +67,7 @@ export const Home = () => {
         aria-labelledby='simple-modal-title'
         aria-describedby='simple-modal-description'
       >
-        {/* <UserDetails userId={userId} /> */}
+        <UserDetails userId={userId} />
       </Modal>
     </div>
   )
