@@ -5,6 +5,7 @@ import { Pagination } from '@material-ui/lab'
 // import { UserCard } from '../UserCard'
 // import { UserDetails } from '../UserDetails'
 import { useStyles } from './StyledHome'
+import { UserCard } from '../UserCard'
 
 export const Home = () => {
   const classes = useStyles()
@@ -48,8 +49,8 @@ export const Home = () => {
     <div className={classes.home}>
       <Grid container justify='center' alignItems='center' spacing={2}>
         {users.map((user) => (
-          <Grid item>
-            {/* <UserCard user={user} handleClick={handleClick} /> */}
+          <Grid key={user.id} item>
+            <UserCard user={user} handleClick={handleClick} />
           </Grid>
         ))}
       </Grid>
