@@ -9,7 +9,7 @@ import {
 } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
 import { useHistory } from 'react-router-dom'
-import { useStyles } from './SyledHeader'
+import { useStyles } from './StyledHeader'
 
 export const Header = () => {
   const [anchorEl, setAnchorEl] = useState(null)
