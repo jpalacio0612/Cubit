@@ -20,6 +20,7 @@ export const Home = () => {
   })
 
   useEffect(() => {
+    console.log('here')
     axios({
       method: 'get',
       url: `https://reqres.in/api/users?page=${page}`

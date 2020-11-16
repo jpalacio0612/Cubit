@@ -19,7 +19,6 @@ export const UserDetails = ({ userId }) => {
       url: `https://reqres.in/api/users/${userId}`
     })
       .then((response) => {
-        console.log(response)
         setUserInfo(response.data.data)
       })
       .catch((error) => console.log(error))
