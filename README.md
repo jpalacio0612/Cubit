@@ -4,7 +4,7 @@ Project made in React and Material-UI
 
 this application consists of consuming an API and displaying the information that comes from the API correctly.
 
-You can try it in the following link: -------
+You can try it in the following link: https://cubit.vercel.app/
 
 ## Launch locally
 
