@@ -7,6 +7,7 @@ import {
 } from '@material-ui/core'
 import Axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { BASE_URL } from '../../utils/baseUrl'
 import { useStyles } from './StyledUserDetails'
 
 export const UserDetails = ({ userId }) => {
@@ -16,7 +17,7 @@ export const UserDetails = ({ userId }) => {
   useEffect(() => {
     Axios({
       method: 'get',
-      url: `https://reqres.in/api/users/${userId}`
+      url: `${BASE_URL}users/${userId}`
     })
       .then((response) => {
         setUserInfo(response.data.data)

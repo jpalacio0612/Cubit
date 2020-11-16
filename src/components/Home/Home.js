@@ -5,6 +5,7 @@ import { Pagination } from '@material-ui/lab'
 import { useStyles } from './StyledHome'
 import { UserCard } from '../UserCard'
 import { UserDetails } from '../UserDetails'
+import { BASE_URL } from '../../utils/baseUrl'
 
 export const Home = () => {
   const classes = useStyles()
@@ -14,16 +15,10 @@ export const Home = () => {
   const [page, setPage] = useState(1)
   const [open, setOpen] = useState(false)
 
-  axios.interceptors.request.use((req) => {
-    req.headers = { 'cubit-test': 'Jonathan' }
-    return req
-  })
-
   useEffect(() => {
-    console.log('here')
     axios({
       method: 'get',
-      url: `https://reqres.in/api/users?page=${page}`
+      url: `${BASE_URL}users?page=${page}`
     })
       .then((response) => {
         setUsers(response.data.data)

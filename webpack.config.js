@@ -23,7 +23,8 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: '/'
   },
   plugins: [
     new CleanWebpackPlugin(),
@@ -33,6 +34,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin()
   ],
   devServer: {
+    publicPath: '/',
     historyApiFallback: true,
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
